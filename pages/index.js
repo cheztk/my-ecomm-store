@@ -18,14 +18,14 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          The best space jellyfish swag on the web
+          The best space jellyfish swag in Thailand!
         </p>
 
         <ul className={styles.grid}>
           {products.map(product => {
-            const { title,price,description,image } = product;
+            const { id,title,price,description,image } = product;
             return(
-                <li className={styles.card}>
+                <li key={id} className={styles.card}>
                   <a href="#" >
                     <img src={image} alt={title}/>
                     <h3>{title}</h3>
